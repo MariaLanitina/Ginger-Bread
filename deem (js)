@@ -1,0 +1,17 @@
+let A = +prompt("Enter vaule A for the equation Y = A*X^2 + B*X + C");
+let B = +prompt("Enter vaule B for the equation Y = A*X^2 + B*X + C");
+let C = +prompt("Enter vaule C for the equation Y = A*X^2 + B*X + C");
+alert("Y = " + A + "*X^2 + " + B + "*X + " + C);
+let D = B * B - A * C * 4;
+if (D < 0) {
+  D = alert("The equation has no roots");
+} else {
+  D = alert("D = " + D);
+}
+D = B * B - A * C * 4;
+alert("(X1,2 = -" + B + " ± √" + D + ") / 2*" + A);
+let X1 = (-B - Math.sqrt(D)) / (A * 2);
+let X2 = (-B + Math.sqrt(D)) / (A * 2);
+let Y1 = (A * X1 * X1) + (B * X1) + C;
+let Y2 = (A * X2 * X2) + (B * X2) + C;
+alert("X1=" + X1.toFixed(2) + " Y1=" + Y1.toFixed(2) + "; X2=" + X2.toFixed(2) + " Y2=" + Y2.toFixed(2));
