@@ -1,0 +1,17 @@
+let t1 = parseInt(prompt("Enter the first number t1 in the seconds (t1 => 1)."));
+let t2 = parseInt(prompt("Enter the second number t2 in the seconds (t2 <= 100`000)."));
+if (!(t1 >= 1) && !(t2 <= 100000)) {
+	alert("Error");
+}
+let summ = t1 + t2;
+let whole = Math.trunc(summ / 60);
+let deduction = summ - whole * 60;
+if (summ < 3600) {
+	alert("0 hours " + whole + " minutes " + deduction + " seconds");
+} else if (summ >= 3600) {
+    whole = Math.trunc(whole / 60);
+    let residue = summ - whole * 3600;
+    let min = Math.trunc(residue / 60);
+	let sec = residue - min * 60;
+    alert(whole + " hours " + min + " minutes " + sec + " seconds");
+}
