@@ -1,0 +1,8 @@
+let deposit = +prompt("Specify the amount of the deposit in rubles:");
+	let percent = +prompt("Specify the amount of the annual percentage of the deposit approved by the bank:");
+	let lot = parseInt(prompt("Specify, for how many years to submit the deposit calculation:"));
+	for (let count = 1; count <= lot; count++) {
+    	let summ = (deposit + ((deposit * percent) / 100));
+		alert("Deposit amount after: " + count + " year: " + summ.toFixed(3));
+		deposit = summ;
+	}	
