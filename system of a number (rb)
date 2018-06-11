@@ -8,3 +8,10 @@ if (value.to_i >= 0 && value.to_i <= 10000) && (current_system >= 2) && (result_
 else
   puts "Wrong Data"
 end
+
+# Without checking incoming data:
+
+i, a, b = ARGV
+sys10 = i.to_i(base = a.to_i)
+sys_b = sys10.to_s(b.to_i)
+puts sys_b
