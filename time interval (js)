@@ -15,3 +15,10 @@ if (summ < 3600) {
 	let sec = residue - min * 60;
     alert(whole + " hours " + min + " minutes " + sec + " seconds");
 }
+
+// Without checking incoming data:
+
+let t1 = process.argv[2];
+let t2 = process.argv[3];
+const x = new Date((t1 + t2) * 1000).toLocaleTimeString(); 
+console.log(x);
